@@ -1,0 +1,38 @@
+{
+  "name": "metrics",
+  "version": "0.0.2",
+  "main": "index.js",
+  "author": "Jiří Prokop <jprokop@synaptiko.cz>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "esm": "^3.0.84",
+    "hyperhtml-element-esm-bundle": "github:synaptiko/hyperhtml-element-esm-bundle#v3.3.0",
+    "koa": "^2.6.2",
+    "koa-basic-auth": "^3.0.0",
+    "koa-compose": "^4.1.0",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "~5.4.0",
+    "standard": "^12.0.1"
+  },
+  "scripts": {
+    "start": "node -r esm index.js",
+    "generate-token": "node -r esm generate-token.js",
+    "lint": "standard --fix \"**/*.js\""
+  },
+  "engines": {
+    "node": ">= 11.3.0"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "fetch"
+    ]
+  }
+}
